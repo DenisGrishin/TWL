@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>RESERVATIONS</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220915214756">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-scroll-show>
+			<div class="header__container">
+				<a href="index.html" class="header__logo">Twelve Mason Park</a>
+			</div>
+			<button type="button" class="header__menu-icon icon-menu"><span></span></button>
+
+			<!-- menu-burger -->
+			<div class="menu-burger">
+				<div class='menu-burger__body'>
+					<div class="menu-burger__img "><img src="img/header/menu-bg.jpg" alt="background screensaver leaves lie on the table">
+					</div>
+					<div class="menu-burger__column ">
+						<button class="menu-burger__close"></button>
+						<nav class="nav-burger">
+							<ul class="nav-burger__list">
+								<li class="nav-burger__item"><a href="restaurant.html" class="nav-burger__link">RESTAURANT</a></li>
+								<li class="nav-burger__item"><a href="garden.html" class="nav-burger__link">GARDEN</a></li>
+								<li class="nav-burger__item"><a href="menu.html" class="nav-burger__link">MENU</a></li>
+								<li class="nav-burger__item"><a href="reservations1.html" class="nav-burger__link">RESERVATIONS</a>
+								</li>
+								<li class="nav-burger__item"><a href="team.html" class="nav-burger__link">TEAM</a></li>
+								<li class="nav-burger__item"><a href="contacts.html" class="nav-burger__link">CONTACTS</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="form-reservations">
+			<div class="form-reservations__container">
+				<h2 class="form-reservations__title title">RESERVATIONS</h2>
+			</div>
+			<div class="form-reservations__bg-c">
+				<div class="form-reservations__container">
+					<div class="form-reservations__body">
+						<form action="#" id="form-booking" class="form-reservations__body-form">
+							<div class="step-one">
+								<h4 class="step-one__title step-one__title_fz">N° of guests</h4>
+								<div id="guests-num" class="step-one__radios   options">
+									<div class="options__item">
+										<input hidden id="guests_1" class="options__input" type="radio" value="1" name="person">
+										<label for="guests_1" class="options__label"><span class="options__text">1</span></label>
+									</div>
+									<div class="options__item">
+										<input hidden id="guests_2" class="options__input" checked type="radio" value="2" name="person">
+										<label for="guests_2" class="options__label"><span class="options__text">2</span></label>
+									</div>
+									<div class="options__item">
+										<input hidden id="guests_3" class="options__input" type="radio" value="3" name="person">
+										<label for="guests_3" class="options__label"><span class="options__text">3</span></label>
+									</div>
+									<div class="options__item">
+										<input hidden id="guests_4" class="options__input" type="radio" value="4" name="person">
+										<label for="guests_4" class="options__label"><span class="options__text">4</span></label>
+									</div>
+								</div>
+								<p class="step-one__text">If you wish to reserve a table <strong>for more than 4
+										people</strong>
+									please send us
+									an e-mail to: <a class="list-bottom__link" href="mailto:twelvemasonpark@gmail.ru">
+										twelvemasonpark@gmail.ru</a> </p>
+								<p class="step-one__text"><strong>Twelve Mason Park - available until September
+										23th</strong></p>
+								<p class="step-one__text">On Wednesdays, Thursdays and Fridays lunch</p>
+								<p class="step-one__text">Menu consisting of 4 courses designed by the Chef - € 160 per
+									person
+								</p>
+								<a class="list-bottom__link" href="mailto:twelvemasonpark@gmail.ru">
+									twelvemasonpark@gmail.ru</a>
+								<h4 class="step-one__title step-one__title_margin">Chose your menu</h4>
+								<ul class="step-one__list">
+									<li class="step-one__item">The Journey - 8 courses € 290 per person</li>
+									<li class="step-one__item">Barolo's menu - Menu & 6 Barolo glasses € 500 per person
+									</li>
+									<li class="step-one__item">White Truffle menu surprise by the Chef- 8 courses € 290 per
+										person - White Truffle not included</li>
+								</ul>
+								<div class="step-one__radios options options_column">
+									<div class="options__item">
+										<input hidden id="menu1" class="options__input radio-mune" type="radio" value="1" name="menu">
+										<label for="menu1" class="options__label options__label_row"><span class="options__text options__text_row">The
+												Journey</span></label>
+									</div>
+									<div class="options__item">
+										<input hidden id="menu2" class="options__input radio-mune" type="radio" value="2" name="menu">
+										<label for="menu2" class="options__label options__label_row"><span class="options__text options__text_row">Barolo's
+												menu - wine pairing
+												included</span></label>
+									</div>
+									<div class="options__item">
+										<input hidden id="menu3" class="options__input radio-mune" type="radio" value="2" name="menu">
+										<label for="menu3" class="options__label options__label_row"><span class="options__text options__text_row">Alba White
+												Truffle menu
+												surprise by the Chef- available October and November</span></label>
+									</div>
+								</div>
+								<div id="btn-lunch-dinner" class="step-one__radios  options">
+									<div class="options__item">
+										<input hidden id="lunch" class="options__input" checked type="radio" value="Lunch" name="meal">
+										<label for="lunch" class="options__label options__label_square"><span class="options__text">Lunch</span></label>
+									</div>
+									<div class="options__item">
+										<input hidden id="dinner" class="options__input" type="radio" value="Dinner" name="meal">
+										<label for="dinner" class="options__label options__label_square"><span class="options__text">Dinner</span></label>
+									</div>
+								</div>
+								<div class="step-one__booking-calendar calendar" id="calendar">
+									<div class="calendar__nav">
+										<button type="button" class="calendar__prev _icon-p-left disabled"></button>
+										<span class="calendar__info"></span>
+										<button type="button" class="calendar__next _icon-p-left"></button>
+
+									</div>
+									<div class="calendar__body">
+										<div class="calendar__week">
+											<span class="calendar__days-week">MON</span>
+											<span class="calendar__days-week">TUE</span>
+											<span class="calendar__days-week">WED</span>
+											<span class="calendar__days-week">THU</span>
+											<span class="calendar__days-week">FRI</span>
+											<span class="calendar__days-week">SAT</span>
+											<span class="calendar__days-week">SUN</span>
+										</div>
+										<div class="calendar__dates">
+
+										</div>
+									</div>
+								</div>
+								<div class="step-one__mark">
+									<div class="legend">
+										<h4 class="legend__title">Legend</h4>
+										<div class="legend__body">
+											<div class="legend__mark">Selected date</div>
+											<div class="legend__mark">Closed</div>
+											<div class="legend__mark">Booked</div>
+										</div>
+									</div>
+								</div>
+								<h4 class="step-one__title">Select the desired time</h4>
+								<div class="step-one__select-time lunch desired-time-seclect ">
+									<div class="desired-time-seclect__items">
+
+										<div class="options options_wrap">
+											<div class="options__item-lunch">
+												<input hidden id="time-lunch-1" checked class="options__input" type="radio" value="12:30PM" name="time-lunch-dinner">
+												<label for="time-lunch-1" class="options__label options__label_width"><span class="options__text">12:30PM</span></label>
+											</div>
+											<div class="options__item-lunch">
+												<input hidden id="time-lunch-2" class="options__input" type="radio" value="12:45PM" name="time-lunch-dinner">
+												<label for="time-lunch-2" class="options__label options__label_width"><span class="options__text">
+														12:45PM</span></label>
+											</div>
+											<div class="options__item-lunch">
+												<input hidden id="time-lunch-3" class="options__input" type="radio" value="1:00PM" name="time-lunch-dinner">
+												<label for="time-lunch-3" class="options__label options__label_width"><span class="options__text">1:00PM
+													</span></label>
+											</div>
+											<div class="options__item-lunch">
+												<input hidden id="time-lunch-4" class="options__input" type="radio" value="1:15PMPM" name="time-lunch-dinner">
+												<label for="time-lunch-4" class="options__label options__label_width"><span class="options__text">1:30PM
+													</span></label>
+											</div>
+											<div class="options__item-lunch">
+												<input hidden id="time-lunch-5" class="options__input" type="radio" value="1:45PM" name="time-lunch-dinner">
+												<label for="time-lunch-5" class="options__label options__label_width"><span class="options__text">1:45PM</span></label>
+											</div>
+											<!-- ------------------------------------------------------------------- -->
+
+											<!--dinner  -->
+											<!-- ------------------------------------------------------------------- -->
+											<div class="options__item-dinner hidden">
+												<input hidden id="time-dinner-1" class="options__input" type="radio" value="8:00PM" name="time-lunch-dinner">
+												<label for="time-dinner-1" class="options__label options__label_width"><span class="options__text">8:00PM</span></label>
+											</div>
+											<div class="options__item-dinner hidden">
+												<input hidden id="time-dinner-2" class="options__input" type="radio" value="8:15PM" name="time-lunch-dinner">
+												<label for="time-dinner-2" class="options__label options__label_width"><span class="options__text">8:15PM</span></label>
+											</div>
+											<div class="options__item-dinner hidden">
+												<input hidden id="time-dinner-3" class="options__input " type="radio" value="8:30PM" name="time-lunch-dinner">
+												<label for="time-dinner-3" class="options__label options__label_width"><span class="options__text">8:30PM</span></label>
+											</div>
+											<div class="options__item-dinner hidden">
+												<input hidden id="time-dinner-4" class="options__input" type="radio" value="8:45PM" name="time-lunch-dinner">
+												<label for="time-dinner-4" class="options__label options__label_width"><span class="options__text">8:45PM</span></label>
+											</div>
+											<div class="options__item-dinner hidden">
+												<input hidden id="time-dinner-5" class="options__input" type="radio" value="9:00PM" name="time-lunch-dinner">
+												<label for="time-dinner-5" class="options__label options__label_width"><span class="options__text">9:00PM</span></label>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<p class="step-one__text  ">To continue with the reservation it is
+									necessary to
+									accept the
+									GENERAL CONDITIONS as reported on this page</p>
+								<div class="step-one__checkbox checkbox">
+									<input id="agree" data-error="Ошибка" class="checkbox__input" type="checkbox" value="yes" name="agree">
+									<label for="agree" class="checkbox__label "><span class="checkbox__text disabled"><strong>I
+												agree</strong></span></label>
+								</div>
+								<button type="button" class="step-one__bnt-next btn btn_p-small disabled" data-goto=".form-reservations__title">Next</button>
+
+							</div>
+
+							<div class="step-two hidden">
+								<h2 class="step-two__title step-two__title_big">Request details</h2>
+								<p class="step-two__text">You are requesting a table for <strong>2</strong> people on
+									<strong>Tuesday, October
+										4th, 2022</strong>
+									at <strong>lunch</strong> at <strong>1:00 pm.</strong>
+								</p>
+								<button type="button" class="step-two__bnt-prev btn btn_p-small">modify</button>
+								<h4 class="step-two__title">Your personal data</h4>
+								<p class="step-two__text step-two__text_mb">guests (<span class="step-two__text step-two__text_small">select
+										the
+										number of children and/or babies, the number
+										of adults is automatically recalculated</span>)</p>
+								<div class="step-two__slect-guests">
+									<div class="step-two__select">
+										<input disabled type="text" value="" name="adults" class="step-two__select-input">
+										<span class="step-two__select-name">adults</span>
+									</div>
+									<div class="step-two__select">
+										<select name="children" class="select-inp form">
+											<option selected value="0">0</option>
+											<option value="1">1</option>
+										</select>
+										<span class="step-two__select-name">children</span>
+									</div>
+								</div>
+								<div class="step-two__user-info data-user">
+									<div class="data-user__row">
+										<select name="user-sex" class="data-user__select select-inp">
+											<option value="male" selected>Mr</option>
+											<option value="woman">Mrs</option>
+										</select>
+										<div class="data-user__box-input">
+											<label for="user-name">name*</label>
+											<input autocomplete="off" id="user-name" type="text" name="user-name" class="data-user__inp required select-inp">
+										</div>
+										<div class="data-user__box-input">
+											<label class="data-user__label" for="user-surname">surname*</label>
+											<input autocomplete="off" id="user-surname" type="text" name="user-surname" class="data-user__inp select-inp required">
+										</div>
+									</div>
+									<div class="data-user__row">
+
+										<div class="data-user__box-input">
+											<label class="data-user__label" for="user-email">e-mail address*</label>
+											<input autocomplete="off" id="user-email" type="email" name="user-email" class="data-user__inp select-inp required">
+										</div>
+
+										<div class="data-user__box-input">
+											<label for="user-tel">telephone*</label>
+											<input autocomplete="off" id="user-tel" type="tel" data-tel-input name="user-tel" class="data-user__inp select-inp required">
+										</div>
+									</div>
+									<div class="data-user__row">
+										<div class="data-user__box-input data-user__box-input_width-100">
+											<label class="data-user__label" for="user-allergies">allergies, food
+												intolerances</label>
+											<input autocomplete="off" id="user-allergies" type="text" name="user-allergies" class="data-user__inp  select-inp">
+										</div>
+									</div>
+									<div class="data-user__box-textarea">
+										<label class="data-user__label" for="user-text">notes</label>
+										<textarea name="user-text" id="user-text" class="data-user__textarea"></textarea>
+									</div>
+									<div class="data-user__row data-user__row_column">
+										<h4 class="data-user__title">privacy*
+										</h4>
+										<p class="data-user__text data-user__text_scroll">Pursuant to Legislative Decree n.196,
+											dated 30 June 2003 and
+											known as the
+											''Code concerning the protection of personal data'', Legislative Decree n. 101, dated
+											10 August 2018, EU Regulation 2016/679 (GDPR) as well as Authorization of the Data
+											Protection Supervisor n. 5/2002 on the processing of sensitive data by different
+											categories of owners, we wish to inform you that the personal data you provide
+											(hereinafter the ''Personal Data'') by filling out this form, which will allow us to
+											properly manage your booking, will be processed at Ristorante Piazza Duomo. The data
+											controller will be Arco Sas di Enrico Crippa & C.The process is legally based on the
+											consent of the data subject. Arco Sas di Enrico Crippa & C. has appointed E-Group
+											S.r.l. as external data processor, with the task of collecting, organizing and managing
+											the database. Your personal data will be processed for the following purpose: enabling
+											you to correctly complete the booking process. Where expressly authorized by you, your
+											data may be used for promotional advertising activities for direct marketing purposes
+											(eg newsletter). The provision of data and consent to their processing is optional, but
+											necessary for the realization of the aforementioned purpose. Personal data provided by
+											you through the booking form will be kept for a period not exceeding 24 months. The
+											processing of data will be done with the tools and methods deemed appropriate to
+											protect the security and confidentiality of personal data and can be done either
+											manually, or through electronic or automated tools, and will include all the operations
+											required by law and necessary for the treatment in question. You access to your data at
+											any time, request modification or cancellation, or oppose to their usage by writing it
+											On these basis, we ask you to express your CONSENT to the
+											processing of data by clicking on the boxes below:</p>
+										<div class="checkbox checkbox_privacy">
+											<input id="privacy" data-error="Ошибка" class="checkbox__input" type="checkbox" value="yes" name="privacy">
+											<label for="privacy" class="checkbox__label"><span class="checkbox__text">I
+													agree</span></label>
+										</div>
+									</div>
+									<div class="data-user__row data-user__row_column">
+										<h4 class="data-user__title">Newsletter
+										</h4>
+
+										<p class="data-user__text">Specific consent for marketing purpose.</p>
+										<div class="checkbox">
+											<input id="newsletter" data-error="Ошибка" class="checkbox__input" type="checkbox" value="yes" name="newsletter">
+											<label for="newsletter" class="checkbox__label"><span class="checkbox__text">I
+													agree</span></label>
+										</div>
+									</div>
+									<span class="data-user__required">* mandatory fields</span>
+									<button class="data-user__submit btn disabled">send request</button>
+								</div>
+							</div>
+							<div class="step-finish hidden">
+
+								<img src="img/reservations/finish.png" alt="finish booking">
+
+
+								<h3 class="step-finish__title">
+									You have successfully booked your time!
+								</h3>
+								<p class="step-finish__text">We are waiting for you in our restaurant.</p>
+							</div>
+						</form>
+
+						<div class="form-reservations__notes ">
+							<div class="general-notes">
+								<h5 class="general-notes__titel">GENERAL NOTES</h5>
+								<strong><em>Dress code</em></strong>
+								<p class="general-notes__text general-notes__text_mt">We kindly ask to our male guests not to
+									wear
+									shorts or flip-flop</p>
+								<strong><em>Allergies or Intolerances </em></strong>
+								<p class="general-notes__text general-notes__text_mt">Allergies, food preferences or
+									intolerances
+									must be communicated at
+									least 48 hours in advance otherwise an extra charge will be applied.</p>
+								<strong><em>Private room </em></strong>
+								<p class="general-notes__text general-notes__text_mt">Private room available upon request</p>
+								<strong><em>Children </em></strong>
+								<p class="general-notes__text general-notes__text_mt">We are glad to welcome children but we
+									care
+									about other Guests’ quietness, therefore we kindly ask you to check on your children's
+									behaviour. Families with children under 8 years old will be welcomed in our private room if
+									available.</p>
+								<strong><em>Animals </em></strong>
+								<p class="general-notes__text general-notes__text_mt">Small pets are allowed upon request</p>
+
+								<strong><em> Reservation policy </em></strong>
+								<p class="general-notes__text general-notes__text_mt">Cancellations or amendments to the number
+									of
+									seats will be accepted if made at least 48 hours
+									before the time of booking.Changes to the number of seats will in any case be evaluated based
+									on
+									availability, and we reserve the possibility <strong>of not accepting these changes.</strong>
+									After this
+									deadline,
+									<strong>
+										in case of cancellation, reduction of seats or no-show, € 290 will be debited for each
+										person
+										not
+										showing up as 'no-show fee'.
+									</strong>
+								</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__social-items bar-social">
+					<span class="bar-social__item"><a href=""><img src="img/icons/_facebook.svg" alt="facebook"></a></span>
+					<span class="bar-social__item"><a href=""><img src="img/icons/twitter.svg" alt="twitter"></a></span>
+					<span class="bar-social__item"><a href=""><img src="img/icons/pinterest.svg" alt="pinterest"></a></span>
+					<span class="bar-social__item"><a href=""><img src="img/icons/insatagram.svg" alt="insatagram"></a></span>
+				</div>
+				<div class="footer__nav nav-footer">
+					<nav class="nav-footer__body">
+						<ul class="nav-footer__list">
+
+							<li class="nav-footer__item"><a href="restaurant.html" class="nav-footer__link">RESTAURANT</a></li>
+							<li class="nav-footer__item"><a href="garden.html" class="nav-footer__link">GARDEN</a></li>
+							<li class="nav-footer__item"><a href="menu.html" class="nav-footer__link">MENU</a></li>
+							<li class="nav-footer__item"><a href="reservations1.html" class="nav-footer__link">RESERVATIONS</a></li>
+							<li class="nav-footer__item"><a href="team.html" class="nav-footer__link">TEAM</a></li>
+							<li class="nav-footer__item"><a href="contacts.html" class="nav-footer__link">CONTACTS</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="footer__copy">2021 © Twelve Mason Park. All Rights reserved.</div>
+			</div>
+		</footer>
+	</div>
+	<!-- 
+<div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+			</div>
+		</div>
+	</div>
+</div>
+ -->
+	<script src="js/app.min.js?_v=20220915214756"></script>
+</body>
+
+</html>
