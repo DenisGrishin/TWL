@@ -673,19 +673,9 @@ hr {
   transition: all 0.5s ease 0s;
   font-size: 1.375rem;
 }
-@media (max-width: 34.375em) and (min-width: 71.25em) {
+@media (max-width: 34.375em) {
   .header__logo {
-    font-size: 1.375rem;
-  }
-}
-@media (max-width: 34.375em) and (min-width: 20em) and (max-width: 71.25em) {
-  .header__logo {
-    font-size: clamp( 1rem , 0.8536585366rem  +  0.7317073171vw , 1.375rem );
-  }
-}
-@media (max-width: 34.375em) and (max-width: 20em) {
-  .header__logo {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 ._header-scroll .header__logo {
@@ -1288,6 +1278,11 @@ hr {
 }
 .menu__title {
   text-align: center;
+}
+@media (max-width: 47.99875em) {
+  .menu__title {
+    padding-left: 0;
+  }
 }
 
 .tabs-box__title {
@@ -1986,7 +1981,7 @@ hr {
 .team__container_top-ps {
   position: relative;
   margin-top: -70px;
-  z-index: 100;
+  z-index: 1;
   padding: 0 0.9375rem;
 }
 @media (max-width: 47.99875em) {
@@ -1996,6 +1991,10 @@ hr {
 }
 .team__video {
   margin-bottom: 5rem;
+}
+.slider-team {
+  position: relative;
+  z-index: 0;
 }
 .slider-team__row-title {
   text-transform: uppercase;
