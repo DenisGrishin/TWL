@@ -13227,6 +13227,12 @@
         let t = !0 === e ? "webp" : "no-webp";
         document.documentElement.classList.add(t);
       }),
+      t.any() && document.documentElement.classList.add("touch"),
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          document.documentElement.classList.add("loaded");
+        }, 0);
+      }),
       (function () {
         let e = document.querySelector(".icon-menu");
         e &&
