@@ -1745,13 +1745,18 @@ hr {
   background-color: rgb(247, 245, 246);
 }
 .calendar__day.active {
-  background-color: #3f3f3f;
+  background-color: #3f3f3f !important;
   color: rgb(255, 255, 255);
 }
 .calendar__day.weekends {
   cursor: default !important;
   background-color: #c00 !important;
   color: #fff !important;
+}
+.calendar__day.booked {
+  cursor: default;
+  background-color: #dec000;
+  color: #fff;
 }
 
 .legend__title:not(:last-child) {

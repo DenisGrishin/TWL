@@ -13047,54 +13047,62 @@
     });
     const Ce = (e) => {
       function t(e, t) {
-        let i = (function (e, t) {
+        let n = [];
+        for (let i = e; i <= t; i++) n.push(i);
+        return n;
+      }
+      function n(e, t) {
+        let n = (function (e, t) {
           return new Date(e, t, 1).getDay();
         })(e, t);
-        return n(i) - 1;
+        return s(n) - 1;
       }
-      function n(e) {
+      function i(e, t) {
+        return new Date(e, t + 1, 0).getDate();
+      }
+      function s(e) {
         return 0 == e ? 7 : e;
       }
       e &&
         (function (e) {
-          let i = new Date(),
-            s = i.getFullYear(),
-            r = i.getMonth(),
-            o = { year: s, month: r, date: i.getDate() };
-          const a = document.querySelector(".calendar__dates"),
-            l = document.querySelector(".calendar__info"),
-            d = document.querySelector(".calendar__prev"),
-            c = document.querySelector(".calendar__next");
-          u(s, r, o, e),
-            d &&
-              c &&
-              a &&
-              (d.addEventListener("click", function () {
+          let r = new Date(),
+            o = r.getFullYear(),
+            a = r.getMonth(),
+            l = { year: o, month: a, date: r.getDate() };
+          const d = document.querySelector(".calendar__dates"),
+            c = document.querySelector(".calendar__info"),
+            u = document.querySelector(".calendar__prev"),
+            p = document.querySelector(".calendar__next");
+          f(o, a, l, e),
+            u &&
+              p &&
+              d &&
+              (u.addEventListener("click", function () {
                 var t;
-                (t = s),
-                  (s = 0 == r ? t - 1 : t),
-                  (r = (function (e, t, n) {
+                (t = o),
+                  (o = 0 == a ? t - 1 : t),
+                  (a = (function (e, t, n) {
                     let i = new Date(),
                       s = i.getMonth(),
                       r = i.getFullYear();
                     e - 1 == s && t == r && n.classList.add("disabled");
                     if (e == s && t == r) return s;
                     return 0 == e ? 11 : e - 1;
-                  })(r, s, d)),
-                  u(s, r, o, e);
+                  })(a, o, u)),
+                  f(o, a, l, e);
               }),
-              c.addEventListener("click", function () {
+              p.addEventListener("click", function () {
                 var t;
-                (t = s),
-                  (s = 11 == r ? t + 1 : t),
-                  (r = (function (e, t) {
+                (t = o),
+                  (o = 11 == a ? t + 1 : t),
+                  (a = (function (e, t) {
                     return 11 == e
                       ? 0
                       : (t.classList.remove("disabled"), e + 1);
-                  })(r, d)),
-                  u(s, r, o, e);
+                  })(a, u)),
+                  f(o, a, l, e);
               }),
-              a.addEventListener("click", function (e) {
+              d.addEventListener("click", function (e) {
                 let t = e.target;
                 document.querySelectorAll("span").forEach((e) => {
                   e.classList.contains("active") &&
@@ -13106,46 +13114,40 @@
                     t.classList.contains("weekends") ||
                     t.closest("span").classList.add("active");
               }));
-          function u(e, i, s, r) {
-            var o, d, c, u;
-            !(function (e, i, s) {
-              let r = [],
-                o = 1,
-                a = (function (e, t) {
-                  return new Date(e, t + 1, 0).getDate();
-                })(e, i),
-                l = t(e, i),
-                d = (function (e, t) {
+          function f(e, r, o, a) {
+            var l, u, p, f;
+            !(function (e, r, o) {
+              let a = [],
+                l = 1,
+                d = i(e, r),
+                c = n(e, r),
+                u = (function (e, t) {
                   return (
                     7 -
-                    n(
+                    s(
                       (function (e, t) {
                         return new Date(e, t + 1, 0).getDay();
                       })(e, t)
                     )
                   );
-                })(e, i);
-              (r = (function (e, t) {
-                let n = [];
-                for (let i = e; i <= t; i++) n.push(i);
-                return n;
-              })(o, a)),
-                (r = (function (e, t, n) {
+                })(e, r);
+              (a = t(l, d)),
+                (a = (function (e, t, n) {
                   for (let i = 0; i < e; i++) n.unshift(t);
                   return n;
-                })(l, "", r)),
-                (r = (function (e, t, n) {
+                })(c, "", a)),
+                (a = (function (e, t, n) {
                   for (let i = 0; i < e; i++) n.push(t);
                   return n;
-                })(d, "", r)),
-                (r = (function (e, t) {
+                })(u, "", a)),
+                (a = (function (e, t) {
                   let n = [],
                     i = [],
                     s = t.length / e;
                   for (let r = 0; r < s; r++) (i = t.splice(0, e)), n.push(i);
                   return n;
-                })(7, r)),
-                s &&
+                })(7, a)),
+                o &&
                   ((function (e, t) {
                     if (t) {
                       t.innerHTML = "";
@@ -13161,7 +13163,7 @@
                         t.appendChild(i);
                       }
                     }
-                  })(r, s),
+                  })(a, o),
                   (function (e, t) {
                     const n = t.querySelectorAll("span");
                     e.forEach((e, t, i) => {
@@ -13171,13 +13173,13 @@
                           e.classList.add("weekends");
                       });
                     });
-                  })(r, s));
-            })(e, i, a),
-              (o = e),
-              (d = i),
-              (c = l) &&
-                (c.innerHTML = `${
-                  ((u = d),
+                  })(a, o));
+            })(e, r, d),
+              (l = e),
+              (u = r),
+              (p = c) &&
+                (p.innerHTML = `${
+                  ((f = u),
                   [
                     "JANUARY",
                     "FEBRUARY",
@@ -13191,26 +13193,51 @@
                     "OCTOBER",
                     "NOVEMBER",
                     "DECEMBER",
-                  ][u])
-                } ${o}`),
-              (function (e, n, i, s) {
-                if (s && e == i.year && n == i.month) {
-                  s.querySelectorAll("span").forEach((e) => {
-                    if (e.innerHTML == i.date)
-                      return e.classList.add("present-day");
+                  ][f])
+                } ${l}`),
+              (function (e, s, r, o) {
+                let a = [],
+                  l = 1,
+                  d = i(e, s);
+                if (((a = t(l, d)), o && e == r.year && s == r.month)) {
+                  o.querySelectorAll("span").forEach((e) => {
+                    if (e.innerHTML == r.date)
+                      return (
+                        e.classList.add("present-day"),
+                        void (
+                          e.classList.contains("weekends") &&
+                          e.classList.remove("weekends")
+                        )
+                      );
                   }),
-                    (function (e, n) {
-                      let i = n.querySelectorAll("span"),
-                        s = t(e.year, e.month),
+                    (function (e, t) {
+                      let i = t.querySelectorAll("span"),
+                        s = n(e.year, e.month),
                         r = e.date + s;
                       for (let e = s; e < r; e++)
                         i[e].classList.add("inactive");
                       i.forEach((e) => {
                         "" == e.innerHTML && e.classList.add("inactive");
                       });
-                    })(i, s);
+                    })(r, o),
+                    (function (e, t) {
+                      t.querySelectorAll("span").forEach((e) => {
+                        if (
+                          "26" == e.innerHTML ||
+                          "3" == e.innerHTML ||
+                          "29" == e.innerHTML ||
+                          "10" == e.innerHTML
+                        ) {
+                          if (e.classList.contains("weekends"))
+                            return console.log(e);
+                          if (e.classList.contains("inactive"))
+                            return console.log(e);
+                          e.classList.add("booked");
+                        }
+                      });
+                    })(0, o);
                 }
-              })(e, i, s, a);
+              })(e, r, o, d);
           }
         })(document.querySelector(e));
     };
