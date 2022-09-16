@@ -12797,8 +12797,7 @@
           t.addEventListener("input", function () {
             1 == t.checked
               ? (e.classList.remove("disabled"), e.removeAttribute("disabled"))
-              : (e.classList.addd("1111disabled"),
-                e.setAttribute("disabled", "disabled"),
+              : (e.setAttribute("disabled", "disabled"),
                 e.classList.add("disabled"));
           });
       }
